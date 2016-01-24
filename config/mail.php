@@ -28,7 +28,7 @@ return [
     |
     */
 
-    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),
+    'host' => env('MAIL_HOST', 'smtp.mailgun.org'),	
 
     /*
     |--------------------------------------------------------------------------
@@ -54,8 +54,8 @@ return [
     |
     */
 
-    'from' => ['address' => null, 'name' => null],
-
+    /*'from' => ['address' => null, 'name' => null],*/
+	'from' => ['address' => 'electro@mail.com', 'name' => 'Electrodomesticos'],
     /*
     |--------------------------------------------------------------------------
     | E-Mail Encryption Protocol

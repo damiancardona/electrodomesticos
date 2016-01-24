@@ -1,0 +1,37 @@
++--------+-----------+--------------------------------+------------------------+-----------------------------------------------------------------+------------+
+| Domain | Method    | URI                            | Name                   | Action                                                          | Middleware |
++--------+-----------+--------------------------------+------------------------+-----------------------------------------------------------------+------------+
+|        | GET|HEAD  | /                              |                        | Closure                                                         |            |
+|        | GET|HEAD  | admin                          |                        | Closure                                                         | auth,rol:2 |
+|        | GET|HEAD  | admin/producto                 | admin.producto.index   | App\Http\Controllers\ProductoABMController@index                | auth,rol:2 |
+|        | POST      | admin/producto                 | admin.producto.store   | App\Http\Controllers\ProductoABMController@store                | auth,rol:2 |
+|        | GET|HEAD  | admin/producto/create          | admin.producto.create  | App\Http\Controllers\ProductoABMController@create               | auth,rol:2 |
+|        | DELETE    | admin/producto/{producto}      | admin.producto.destroy | App\Http\Controllers\ProductoABMController@destroy              | auth,rol:2 |
+|        | PUT|PATCH | admin/producto/{producto}      | admin.producto.update  | App\Http\Controllers\ProductoABMController@update               | auth,rol:2 |
+|        | GET|HEAD  | admin/producto/{producto}      | admin.producto.show    | App\Http\Controllers\ProductoABMController@show                 | auth,rol:2 |
+|        | GET|HEAD  | admin/producto/{producto}/edit | admin.producto.edit    | App\Http\Controllers\ProductoABMController@edit                 | auth,rol:2 |
+|        | POST      | admin/usuario                  | admin.usuario.store    | App\Http\Controllers\UsuarioABMController@store                 | auth,rol:2 |
+|        | GET|HEAD  | admin/usuario                  | admin.usuario.index    | App\Http\Controllers\UsuarioABMController@index                 | auth,rol:2 |
+|        | GET|HEAD  | admin/usuario/create           | admin.usuario.create   | App\Http\Controllers\UsuarioABMController@create                | auth,rol:2 |
+|        | GET|HEAD  | admin/usuario/{usuario}        | admin.usuario.show     | App\Http\Controllers\UsuarioABMController@show                  | auth,rol:2 |
+|        | DELETE    | admin/usuario/{usuario}        | admin.usuario.destroy  | App\Http\Controllers\UsuarioABMController@destroy               | auth,rol:2 |
+|        | PUT|PATCH | admin/usuario/{usuario}        | admin.usuario.update   | App\Http\Controllers\UsuarioABMController@update                | auth,rol:2 |
+|        | GET|HEAD  | admin/usuario/{usuario}/edit   | admin.usuario.edit     | App\Http\Controllers\UsuarioABMController@edit                  | auth,rol:2 |
+|        | GET|HEAD  | home                           |                        | Closure                                                         |            |
+|        | GET|HEAD  | login                          |                        | App\Http\Controllers\Auth\AuthController@showLoginForm          | web,guest  |
+|        | POST      | login                          |                        | App\Http\Controllers\Auth\AuthController@login                  | web,guest  |
+|        | GET|HEAD  | logout                         |                        | App\Http\Controllers\Auth\AuthController@logout                 | web        |
+|        | POST      | password/email                 |                        | App\Http\Controllers\Auth\PasswordController@sendResetLinkEmail | web,guest  |
+|        | POST      | password/reset                 |                        | App\Http\Controllers\Auth\PasswordController@reset              | web,guest  |
+|        | GET|HEAD  | password/reset/{token?}        |                        | App\Http\Controllers\Auth\PasswordController@showResetForm      | web,guest  |
+|        | GET|HEAD  | register                       |                        | App\Http\Controllers\Auth\AuthController@showRegistrationForm   | web,guest  |
+|        | POST      | register                       |                        | App\Http\Controllers\Auth\AuthController@register               | web,guest  |
+|        | GET|HEAD  | sitio/contacto                 |                        | App\Http\Controllers\SitioController@formContacto               |            |
+|        | POST      | sitio/contacto                 |                        | App\Http\Controllers\SitioController@send                       |            |
+|        | GET|HEAD  | sitio/info                     |                        | Closure                                                         |            |
+|        | GET|HEAD  | sitio/producto/info            |                        | Closure                                                         |            |
+|        | GET|HEAD  | sitio/productos                |                        | Closure                                                         |            |
+|        | GET|HEAD  | sitio/promociones              |                        | Closure                                                         |            |
+|        | GET|HEAD  | usuario/carrito                |                        | Closure                                                         | auth       |
+|        | GET|HEAD  | usuario/info                   |                        | App\Http\Controllers\UsuarioSitioController@informacion         | auth       |
++--------+-----------+--------------------------------+------------------------+-----------------------------------------------------------------+------------+

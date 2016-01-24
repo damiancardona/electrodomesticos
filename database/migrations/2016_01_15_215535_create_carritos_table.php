@@ -36,5 +36,6 @@ class CreateCarritosTable extends Migration
     public function down()
     {
         Schema::drop('carritos');
+		Schema::drop('carritos_cuerpo');
     }
 }
